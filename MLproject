@@ -1,0 +1,8 @@
+# MLProject File for Pytorch-FashionMNIST-CNN
+
+conda_env: conda.yaml
+
+entry_point:
+    main:
+        command: python src/main.py
+        
