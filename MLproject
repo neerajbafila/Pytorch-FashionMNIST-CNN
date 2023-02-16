@@ -2,7 +2,18 @@
 
 conda_env: conda.yaml
 
-entry_point:
+entry_points:
     main:
-        command: python src/main.py
+        command: "python src/main.py"
+    
+    get_data:
+        parameters:
+            config_path: {type: str, default: "config/config.yaml"} 
+            params: {type: str, default: "config/params.yaml"}
+        command: "python src/stage_01_get_data.py --config {config_path} --p {params}"
         
+    base_model_creation:
+        parameters:
+            config_path: {type: str, default: "config/config.yaml"} 
+            params: {type: str, default: "config/params.yaml"}
+        command: "python src/stage_02_base_model_creation.py --config {config_path}"

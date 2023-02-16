@@ -31,3 +31,9 @@ step 06- install setup.py
 ```
 pip install -e .
 ```
+
+## to run ml project from local
+
+```
+mlflow run . --env-manager local
+```
